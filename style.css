@@ -1,0 +1,111 @@
+﻿/*
+ * Function ：全局定义style.css
+ * Author   ：高鑫
+ * 
+*/
+body{
+	font-size: 12px;
+	background-color: #000000;
+}
+
+#body_div{
+	font-family:Arial,Helvetica;
+	margin:20px 100px 0 100px;
+}
+
+.top{
+	height:80px;
+}
+
+.title{
+	width:300px;
+	padding:5px 0 0 80px;
+	float:left;
+}
+/*右上角 css*/
+.info{
+	height:60px;
+	text-align:center;
+	float:right;
+	margin:24px 80px 0 0;
+}
+
+.info a{
+	text-decoration:none;
+}
+
+#add_site a{
+	font-size: 11px;
+	font-weight: bold;
+	color:#fff;
+	background: url(images/bg_over.gif) center center no-repeat;
+}
+
+#path_times{
+	margin-right:10px;
+	float:left;
+	padding:12px;
+	background: url(images/bg_over.gif) center center no-repeat;
+	font-size:20px;
+}
+
+#weibo{
+	margin-right:10px;
+	float:left;
+	padding:12px;
+	background: url(images/bg_weibo.gif) center center no-repeat;
+	font-size:20px;
+}
+
+#path{
+	overflow:hidden;
+}
+
+#path_times a,#add_site a,#weibo a{
+	font-size: 12px;
+	color:#FFFFFF;
+}
+/*底部 footer css*/
+.footer{
+	color:#fff;
+}
+.hidden{
+	display:none;
+}
+
+/*menu css*/
+.menu {
+	margin-left:60px;
+	height: 100px;
+	display: block;
+}
+.menu ul {
+	padding: 0;
+	margin: 0;
+}
+.menu ul li {
+	float: left;
+	/* 菜单子元素的内容超出不可见 */  
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+}
+.menu ul li a {
+	/* 相对定位  */ 
+	position: relative;
+	display: block;
+	width: 100px;
+	height: 80px;
+}
+.menu ul li a span {
+	/* 所有层将使用绝对定位 */
+	position: absolute;
+	left: 0;
+	width: 110px;
+}
+.menu ul li a span.out {
+	top: 0px;
+}
+.menu a img, .title a img, .footer a img{ 
+	border:none;
+}

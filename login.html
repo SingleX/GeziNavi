@@ -1,0 +1,57 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>管理登录 | 格子导航</title>
+<style type="text/css">
+<!--
+.content{
+	margin-top:100px;
+	height:300px;
+	background:url('images/login_bg.png') center no-repeat;
+}
+p, h1{
+	color:#FFFFFF;
+}
+-->
+</style>
+<script type="text/javascript">
+function validate_required(field,alerttxt){
+	with (field){
+		if (value==null||value==""){
+			alert(alerttxt);
+			return false
+		}
+		else{
+			return true
+		}
+	}
+}
+function validate_form(thisform){
+	with (thisform){
+		if (validate_required(username,"请输入账户！")==false){
+			username.focus();
+			return false;
+		}
+		if (validate_required(password,"请输入密码！")==false){
+			password.focus();
+			return false;
+		}
+	}
+}
+</script>
+</head>
+<body>
+	<div class="content" align="center">
+		<br/>
+		<div align="center"><h1>管理登陆</h1></div>
+		<div class="form" align="center" > 
+			<form action="checkuser.php" method="post" name="form" onSubmit="return validate_form(this);">
+				<p>账号 <input name="username" type="text"/></p>
+				<p>密码 <input name="password" type="password"/></p>
+				<input type="submit" value="登录" />
+				<input type="reset" value="重写" />
+			</form>
+		</div>
+	</div>
+</body>
+</html>
